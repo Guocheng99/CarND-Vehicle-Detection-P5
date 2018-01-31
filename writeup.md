@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 ---
 ### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
 
 You're reading it!
 
@@ -85,7 +85,6 @@ clf = GridSearchCV(svc, svm_parameters, verbose=2, cv=3)
 clf.fit(X_train, y_train)
 print('Best parameters:')
 print(clf.best_params_)
-
 ```
 
 `GridSearchCV` will fit `3` times (default value) for every combination of all the parameters, then keep the best performance parameter in `clf.best_params_`.
@@ -139,7 +138,7 @@ Moreover, I also introduce a class named `HeatHistory` to keep the heatmaps of a
 
 ## Discussion
 
-####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 * Sliding Window + HOG + SVM is generally slow, one possible way to speed up is to analyze the redundancy in feature vector (currently, it is a `[1,2052] ` vector), to reduce unnecessary computation.
 * Many parameters need manually twisted. The model is may not be general enough to handle various circumstances. 
