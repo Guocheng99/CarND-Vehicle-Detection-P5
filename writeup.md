@@ -111,8 +111,8 @@ I applied sliding windows at the bottom half of the image to detect the possible
 
 There are 2 major issues need to address with the sliding window:
 
-* flase positives
-* processing performance
+* False Positives
+* Processing Performance
 
 To eliminate the **false positives** (and combine the boxes), a heat map with a threshold was used to find the true positives.
 
